@@ -1,0 +1,16 @@
+﻿<mvvm:WindowView x:Class="Csp.Utilities.Wpf.Mvvm.TestApp.MainWindow"
+                 x:TypeArguments="vm:MainViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Csp.Utilities.Wpf.Mvvm.TestApp"
+        xmlns:mvvm="clr-namespace:Csp.Utilities.Wpf.Mvvm;assembly=Csp.Utilities.Wpf.Mvvm"
+        xmlns:vm="clr-namespace:Csp.Utilities.Wpf.Mvvm.TestApp.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="{Binding StatusDisplay, UpdateSourceTrigger=PropertyChanged}" />
+        <Button Command="{Binding NameCommand}" Width="40" Height="40" />
+    </Grid>
+</mvvm:WindowView>
